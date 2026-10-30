@@ -1,0 +1,564 @@
+@import "tailwindcss";
+
+/* Pointer-gated hover motion: touch taps fire false hovers, so any
+   hover-driven movement (as opposed to color, which is harmless) is
+   gated behind a real pointer. */
+@custom-variant motion-hover (@media (hover: hover) and (pointer: fine));
+
+/* ============================================================
+   THE BOUND FIELD NOTEBOOK — design tokens
+   A Living Field Journal: warm paper ground, forest ink sections,
+   brass specimen stamps, confidence carried by line treatment.
+   ============================================================ */
+
+@theme {
+  --color-paper: #f6f4ed;
+  --color-paper-deep: #efece1;
+  --color-stone: #e8e5db;
+  --color-moss: #dfe7d8;
+  --color-sage: #a8b8a0;
+  /* Sage and brass split into text-safe inks for light grounds: the pale
+     values fail WCAG AA as text (1.9:1 and 3.9:1) while staying correct
+     as borders/fills and on forest grounds. See DESIGN.md colors. */
+  --color-sage-ink: #566d5e;
+  --color-botanical: #516f57;
+  --color-forest: #203b32;
+  --color-forest-deep: #16281f;
+  --color-ink: #202822;
+  --color-ink-soft: #4a544c;
+  --color-brass: #b18b5d;
+  --color-brass-light: #bd9c75;
+  --color-brass-ink: #755a35;
+
+  --font-display: var(--font-instrument-serif), "Iowan Old Style", Georgia,
+    serif;
+  --font-sans: var(--font-geist), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --ease-journal: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- base ---------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+  /* Belt-and-braces against sideways panning: overflow on the root
+     propagates to the viewport, so this blocks touch panning outright.
+     It does NOT change what a full-page capture records (scrollWidth
+     still reports overhanging content) — that is `main`'s job below. */
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+  /* Reveal never hides content when motion is reduced: the armed
+     state is skipped in JS, and CSS refuses it here as a backstop. */
+  [data-motion-pending] .reveal-child {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Browser surfaces belong to the design */
+::selection {
+  background: var(--color-moss);
+  color: var(--color-forest-deep);
+}
+body {
+  caret-color: var(--color-botanical);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass-ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+  /* The ring lands in its final colour on the frame focus arrives.
+     Tailwind's transition-colors eases outline-color, which would
+     have the indicator colour itself fading in over 220ms. The ring
+     is visible instantly either way; this just stops its colour
+     drifting from currentColor. Re-declared at house timing so
+     everything else keeps its transitions while focused. */
+  transition:
+    transform var(--dur-micro) ease-out,
+    background-color var(--dur-ui) var(--ease-journal),
+    border-color var(--dur-ui) var(--ease-journal),
+    color var(--dur-ui) var(--ease-journal);
+}
+
+/* ---------- pointer-down response ----------
+   The control answers the press, not the release: buttons and boxed
+   CTAs (.btn-press) compress a hair — a compositor-only transform,
+   160ms, the press duration the motion scale already reserved. Colors
+   are re-declared here at the house curve so press, hover and release
+   never disagree about timing (several CTAs previously used the
+   150ms default). Every tappable also takes the instant system tap
+   tint in house moss on touch. Reduced-motion readers keep the
+   response as a pure opacity change: the movement is dropped,
+   never the feedback. */
+
+button {
+  transition:
+    transform var(--dur-micro) ease-out,
+    background-color var(--dur-ui) var(--ease-journal),
+    border-color var(--dur-ui) var(--ease-journal),
+    color var(--dur-ui) var(--ease-journal);
+}
+
+.btn-press {
+  transition:
+    transform var(--dur-micro) ease-out,
+    background-color var(--dur-ui) var(--ease-journal),
+    border-color var(--dur-ui) var(--ease-journal),
+    color var(--dur-ui) var(--ease-journal);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: color-mix(
+    in srgb,
+    var(--color-moss) 80%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button:not(:disabled):active,
+  .btn-press:active {
+    transform: scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button:not(:disabled):active,
+  .btn-press:active {
+    opacity: 0.85;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-sage) var(--color-paper-deep);
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  border: 3px solid var(--color-paper-deep);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-botanical);
+}
+
+/* ---------- notebook materials ---------- */
+
+/* Dot-grid ruling, as on research notebook paper */
+.dot-grid {
+  background-image: radial-gradient(
+    var(--color-sage) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+  background-position: 0 0;
+}
+
+/* Fine paper grain */
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.15 0 0 0 0 0.12 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Photographs taped into the notebook */
+.taped {
+  position: relative;
+}
+.taped::before,
+.taped::after {
+  content: "";
+  position: absolute;
+  width: 96px;
+  height: 26px;
+  background: color-mix(in srgb, var(--color-moss) 68%, transparent);
+  border-left: 1px dashed color-mix(in srgb, var(--color-botanical) 35%, transparent);
+  border-right: 1px dashed color-mix(in srgb, var(--color-botanical) 35%, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+.taped::before {
+  top: -11px;
+  left: -22px;
+  transform: rotate(-4deg);
+}
+.taped::after {
+  bottom: -11px;
+  right: -22px;
+  transform: rotate(-3deg);
+}
+
+/* Specimen stamp frame */
+.stamp {
+  border: 1.5px solid var(--color-brass);
+  box-shadow: inset 0 0 0 3.5px var(--color-paper), inset 0 0 0 4.5px
+    color-mix(in srgb, var(--color-brass) 55%, transparent);
+}
+
+/* Confidence lines: the state language of evidence */
+.line-observed {
+  border-top: 2px solid var(--color-botanical);
+}
+.line-preliminary {
+  border-top: 2px dashed var(--color-brass);
+}
+.line-unrecorded {
+  border-top: 2px dotted var(--color-sage);
+}
+
+/* Index tabs, as on a notebook's edge */
+.tab-active {
+  background: var(--color-forest);
+  color: var(--color-paper);
+}
+
+/* Display headings */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Small caps labels for stamps and specimen data */
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Long-form prose measure */
+.prose-journal p {
+  max-width: 68ch;
+}
+.prose-journal p + p {
+  margin-top: 1.1em;
+}
+
+/* ---------- motion: the quiet rhythm of nature ----------
+   One curve (--ease-journal) and one duration scale, extended —
+   never forked. Motion only where it explains a relationship,
+   reinforces hierarchy, or gives feedback. */
+
+:root {
+  --dur-micro: 160ms; /* press, toggles */
+  --dur-ui: 220ms; /* hover, navigation, disclosure */
+  --dur-reveal: 520ms; /* content entrances */
+  --dur-hero: 720ms; /* the hero sequence */
+}
+
+@keyframes journal-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes stamp-settle {
+  from {
+    opacity: 0;
+    transform: scale(0.94) rotate(-1.2deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes print-lay {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotate(-0.7deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes anchor-flash {
+  from {
+    background-color: color-mix(in srgb, var(--color-moss) 90%, transparent);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+/* Hero sequence: stamp presses in, headline rises, support and CTAs
+   follow, the print is laid into the book. The headline is readable
+   throughout; nothing waits longer than 460ms to appear. */
+.hero-seq > * {
+  animation: journal-in var(--dur-reveal) var(--ease-journal) both;
+}
+.hero-seq > :nth-child(1) {
+  animation-delay: 40ms;
+}
+.hero-seq > :nth-child(2) {
+  animation-delay: 120ms;
+  animation-duration: 640ms;
+}
+.hero-seq > :nth-child(3) {
+  animation-delay: 240ms;
+}
+.hero-seq > :nth-child(4) {
+  animation-delay: 340ms;
+}
+.hero-seq > :nth-child(5) {
+  animation-delay: 440ms;
+}
+.hero-stamp {
+  animation: stamp-settle 480ms var(--ease-journal) 0ms both !important;
+}
+.hero-print {
+  animation: print-lay var(--dur-hero) var(--ease-journal) 260ms both;
+}
+
+/* Scroll reveal, armed only when JS runs and motion is allowed.
+   [data-motion-pending] hides; [data-revealed] plays once. */
+.reveal-shown {
+  animation: journal-in var(--dur-reveal) var(--ease-journal) both;
+}
+[data-motion-pending] .reveal-child {
+  opacity: 0;
+  transform: translateY(12px);
+}
+[data-revealed] .reveal-child {
+  animation: journal-in 480ms var(--ease-journal) both;
+}
+[data-revealed] .reveal-child:nth-child(1) {
+  animation-delay: 60ms;
+}
+[data-revealed] .reveal-child:nth-child(2) {
+  animation-delay: 120ms;
+}
+[data-revealed] .reveal-child:nth-child(3) {
+  animation-delay: 180ms;
+}
+[data-revealed] .reveal-child:nth-child(4) {
+  animation-delay: 240ms;
+}
+[data-revealed] .reveal-child:nth-child(5) {
+  animation-delay: 300ms;
+}
+[data-revealed] .reveal-child:nth-child(6) {
+  animation-delay: 360ms;
+}
+
+/* Roadmap segments draw in intended order — a sequence, never a
+   progress bar; the draw always completes and status labels carry
+   the truth of what is done. */
+.rail-seg {
+  transform-origin: left center;
+}
+[data-revealed] .rail-seg {
+  animation: rule-draw 560ms var(--ease-journal) both;
+}
+[data-revealed] li:nth-child(1) .rail-seg {
+  animation-delay: 100ms;
+}
+[data-revealed] li:nth-child(2) .rail-seg {
+  animation-delay: 170ms;
+}
+[data-revealed] li:nth-child(3) .rail-seg {
+  animation-delay: 240ms;
+}
+[data-revealed] li:nth-child(4) .rail-seg {
+  animation-delay: 310ms;
+}
+[data-revealed] li:nth-child(5) .rail-seg {
+  animation-delay: 380ms;
+}
+[data-revealed] li:nth-child(6) .rail-seg {
+  animation-delay: 450ms;
+}
+
+/* Mobile menu: a disclosure, not a performance. Grows from under the
+   header edge; never scales or bounces. Driven by transitions rather
+   than keyframes so a reversal mid-flight continues from the current
+   on-screen value — rapid open/close reverses in place instead of
+   jumping (interruptibility). "entering" mounts hidden and flips to
+   "open" on the first frame, giving the transition a start value;
+   "exiting" is the mirror path back and unmounts on completion. */
+.menu-panel {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity var(--dur-ui) var(--ease-journal),
+    transform var(--dur-ui) var(--ease-journal);
+}
+.menu-panel[data-state="entering"],
+.menu-panel[data-state="exiting"] {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+/* Gentle emphasis after an in-page jump — feedback, played once. */
+.anchor-flash {
+  animation: anchor-flash 900ms var(--ease-journal) both;
+}
+
+/* ---------- print: the report and proposal on paper ---------- */
+
+@media print {
+  @page {
+    margin: 18mm 16mm;
+  }
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-plain {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: #999 !important;
+    box-shadow: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+  .print-break-before {
+    break-before: page;
+  }
+  /* Nothing stays hidden for a reader who prints or saves to PDF */
+  [data-motion-pending] .reveal-child,
+  .reveal-shown,
+  .hero-seq > *,
+  .hero-stamp,
+  .hero-print,
+  [data-revealed] .reveal-child,
+  [data-revealed] .rail-seg {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8.5pt;
+    color: #555;
+    word-break: break-all;
+  }
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+}
+
+/* ---------- reader media preferences ----------
+   These blocks live LAST on purpose: they override base rules above
+   them (:focus-visible, .line-*, .border-stone utilities), so source
+   order must favour them — same specificity, last declaration wins.
+   Earlier in the file they silently lost to the base rules. */
+
+/* Readers who ask for more contrast get defined edges, not just tints:
+   a thicker forest ring (3:1+ against every surface here), the
+   confidence lines — which carry scientific meaning — in text-safe
+   inks, stone dividers one step darker, and a solid header rule
+   (WCAG 2.2 AA / prefers-contrast: more). Scoped to light grounds:
+   stone and the confidence lines never appear on forest sections. */
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline: 3px solid var(--color-forest);
+    outline-offset: 2px;
+  }
+  .line-preliminary {
+    border-top-color: var(--color-brass-ink);
+  }
+  .line-unrecorded {
+    border-top-color: var(--color-sage-ink);
+  }
+  .border-stone {
+    border-color: var(--color-sage-ink);
+  }
+  header {
+    border-bottom-color: var(--color-forest);
+  }
+}
+
+/* The header is the one translucent material on the site. Readers who
+   ask for reduced transparency get solid paper instead — hierarchy
+   then rests on its border and scrolled shadow, exactly like every
+   other surface here (prefers-reduced-transparency: reduce). The
+   annotation chips over Photograph 1 also frost over, so their labels
+   sit on color, not on the photograph. The blur itself is disabled
+   through Tailwind's own --tw-backdrop-blur variable: the build's
+   minifier folds the unprefixed backdrop-filter override into its
+   -webkit- alias, which Chrome's computed style ignores — setting the
+   variable the utility reads is the one form that always survives. */
+@media (prefers-reduced-transparency: reduce) {
+  header {
+    background-color: var(--color-paper) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    --tw-backdrop-blur: blur(0) !important;
+  }
+  .anno-rest {
+    background-color: var(--color-forest-deep) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    --tw-backdrop-blur: blur(0) !important;
+  }
+}

@@ -1,0 +1,727 @@
+{
+  "overflow": [],
+  "console": [],
+  "headings": [],
+  "landmarks": [],
+  "images": [],
+  "names": [],
+  "focus": [
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:Tunas MudaBiodiversity R",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "BUTTON:",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:Browse the plant databas",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:Read the research report",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "BUTTON:Scattered pink-purple fl",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "BUTTON:Rounded, bilobed leaves",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "BUTTON:Some yellowing leaves",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "BUTTON:Seating and paved surfac",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:Read the research report",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:Open this record →",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:Open the plant database",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/",
+      "el": "A:See the full ecosystem a",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "A:Tunas MudaBiodiversity R",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "BUTTON:",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "BUTTON:Print this report",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "BUTTON:Contents+",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "DIV:Observation CategoryIndi",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "A:Open record →",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "A:Open record →",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "A:Open record →",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "A:Open record →",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "DIV:Potential ChallengeSuppo",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "DIV:PhaseActionIntended Outc",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/research",
+      "el": "A:Full research report",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Tunas MudaBiodiversity R",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "BUTTON:",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:← Back to the full resea",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "BUTTON:Print / save as PDF",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Full research report",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Ecosystem insights",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Plant database",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Improvements",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Implementation roadmap",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:Improvement plan",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:About our Service as Act",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 390,
+      "route": "/proposal",
+      "el": "A:SDG connections",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Tunas MudaBiodiversity R",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Overview",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Plant Database",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Research",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Ecosystem",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Improvements",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:About",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Improvement plan",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Browse the plant databas",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "A:Read the research report",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "BUTTON:Scattered pink-purple fl",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/",
+      "el": "BUTTON:Rounded, bilobed leaves",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Tunas MudaBiodiversity R",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Overview",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Plant Database",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Research",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Ecosystem",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Improvements",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:About",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "A:Improvement plan",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "BUTTON:Print this report",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "BUTTON:1Executive Summary",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "BUTTON:2Introduction and Backgr",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/research",
+      "el": "BUTTON:3Research Methodology",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Tunas MudaBiodiversity R",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Overview",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Plant Database",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Research",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Ecosystem",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Improvements",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:About",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Improvement plan",
+      "hasRing": true,
+      "partiallyVisible": true,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:← Back to the full resea",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "BUTTON:Print / save as PDF",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Full research report",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    },
+    {
+      "w": 1440,
+      "route": "/proposal",
+      "el": "A:Ecosystem insights",
+      "hasRing": true,
+      "partiallyVisible": false,
+      "obscuredByHeader": false
+    }
+  ],
+  "contrast": [],
+  "reducedMotion": [
+    {
+      "route": "/",
+      "samples": [
+        {
+          "label": "reveal-child",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        },
+        {
+          "label": "nav-link",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        },
+        {
+          "label": "hero-visual",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "route": "/research",
+      "samples": [
+        {
+          "label": "nav-link",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        },
+        {
+          "label": "hero-visual",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "route": "/action",
+      "samples": [
+        {
+          "label": "reveal-child",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        },
+        {
+          "label": "nav-link",
+          "animationDuration": "0.001s",
+          "transitionDuration": "0.001s",
+          "opacity": "1"
+        }
+      ]
+    }
+  ],
+  "print": [
+    {
+      "route": "/research",
+      "hiddenReveals": [],
+      "noPrintStillVisible": []
+    },
+    {
+      "pdf": "pages 25 chars 25358\r\nhas_end True\r\nsections 6\r\nhidden_marker_check 1"
+    }
+  ],
+  "links": [],
+  "metadata": [
+    {
+      "route": "/",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/research",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/field-guide",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/field-guide/flowering-tree",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/field-guide/tropical-palms",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/ecosystem",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/action",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/action/roadmap",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/proposal",
+      "issue": "no canonical"
+    },
+    {
+      "route": "/about",
+      "issue": "no canonical"
+    }
+  ],
+  "interactions": [
+    {
+      "menu": {
+        "before": "false",
+        "after": "true",
+        "navVisible": false,
+        "afterEsc": "false"
+      }
+    },
+    {
+      "toc": {
+        "found": true,
+        "label": "Contents+",
+        "expanded": "false",
+        "afterClick": "true",
+        "jumpLabel": "13Evidence and References",
+        "beforeY": 0,
+        "after": {
+          "y": 27767,
+          "lastSectionInView": true
+        }
+      }
+    },
+    {
+      "printButton": "wired"
+    }
+  ],
+  "notes": []
+}

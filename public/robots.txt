@@ -1,0 +1,5 @@
+# Tunas Muda Biodiversity — research archive.
+# No canonical domain is confirmed yet, so no sitemap reference is
+# declared here; add one once the site has its final URL.
+User-agent: *
+Allow: /

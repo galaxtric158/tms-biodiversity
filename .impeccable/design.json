@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T00:00:00Z",
+  "title": "Design System: Tunas Muda Biodiversity — The Bound Field Notebook",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#F6F4ED",
+        "tonalRamp": ["#0c0b07", "#272520", "#44423c", "#63615b", "#84827c", "#a7a59e", "#cbc9c2", "#f0eee7"]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Deep Paper",
+        "canonical": "#EFECE1",
+        "tonalRamp": ["#0d0b05", "#27251d", "#444239", "#646158", "#858278", "#a8a59b", "#ccc9be", "#f2efe3"]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Warm Stone",
+        "canonical": "#E8E5DB",
+        "tonalRamp": ["#0d0b05", "#27251e", "#44423a", "#646159", "#858279", "#a8a59c", "#ccc9bf", "#f1eee4"]
+      },
+      "moss": {
+        "role": "neutral",
+        "displayName": "Light Moss",
+        "canonical": "#DFE7D8",
+        "tonalRamp": ["#080d04", "#22271c", "#3e4438", "#5d6457", "#7e8578", "#a0a89a", "#c4ccbe", "#eaf2e3"]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Sage — The Uncertainty Color",
+        "canonical": "#A8B8A0",
+        "tonalRamp": ["#050e01", "#1d2916", "#394732", "#586651", "#798871", "#9bab93", "#bfcfb7", "#e4f5db"]
+      },
+      "botanical": {
+        "role": "primary",
+        "displayName": "Botanical Green — Observed Evidence",
+        "canonical": "#54745B",
+        "tonalRamp": ["#001004", "#0e2c17", "#2c4a33", "#4b6a52", "#6b8c72", "#8daf94", "#b1d4b8", "#d5f9dc"]
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Forest — Notebook Ink",
+        "canonical": "#203B32",
+        "tonalRamp": ["#000f09", "#102b22", "#2d493f", "#4c685e", "#6d8a7f", "#8fada2", "#b2d1c6", "#d7f7eb"]
+      },
+      "forest-deep": {
+        "role": "primary",
+        "displayName": "Forest Deep",
+        "canonical": "#16281F",
+        "tonalRamp": ["#010f07", "#182a21", "#34473d", "#53675c", "#73887d", "#96ab9f", "#b9cfc3", "#def5e8"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#202822",
+        "tonalRamp": ["#060d08", "#1f2721", "#3c453e", "#5b645d", "#7c857e", "#9ea8a0", "#c2ccc4", "#e7f2e9"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink — Green-Gray",
+        "canonical": "#4A544C",
+        "tonalRamp": ["#060d07", "#1f2821", "#3b453d", "#5a645c", "#7b867d", "#9da89f", "#c1cdc3", "#e6f2e8"]
+      },
+      "brass": {
+        "role": "tertiary",
+        "displayName": "Brass — Stamp Metal",
+        "canonical": "#B18B5D",
+        "tonalRamp": ["#140800", "#361f00", "#5b3a06", "#7d592c", "#a07b4d", "#c49d6f", "#eac192", "#ffebd4"]
+      },
+      "brass-ink": {
+        "role": "tertiary",
+        "displayName": "Brass Ink — Readable Stamp Text",
+        "canonical": "#8A6A3E",
+        "tonalRamp": ["#130900", "#342002", "#593b0b", "#7a5b2f", "#9d7c50", "#c19f71", "#e6c394", "#ffebd2"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; Instrument Serif italic is a voice for emphasis and binomials, never bold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings in the display serif."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All sentence-case reading copy; prose capped at 68ch via .prose-journal."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Museum-stamp register: stamps, plate numbers, badges, table keys, section eyebrows, breadcrumbs. Uppercase with 0.14em tracking, tabular figures."
+      }
+    },
+    "shadows": [
+      { "name": "print-lift", "value": "0 22px 44px -30px rgba(32,40,34,0.55)", "purpose": "Photographs taped into the notebook (field-guide prints)." },
+      { "name": "hero-print-lift", "value": "0 30px 60px -34px rgba(32,40,34,0.6)", "purpose": "The annotated hero photograph, slightly stronger." },
+      { "name": "sheet-lift", "value": "0 30px 60px -40px rgba(32,40,34,0.45)", "purpose": "The proposal letter sheet floating on the paper-deep desk." },
+      { "name": "header-lift", "value": "0 1px 0 0 var(--color-stone), 0 10px 24px -18px rgba(32,40,34,0.35)", "purpose": "Applied only while scrolled — state indication, not decoration." },
+      { "name": "stamp-inset", "value": "inset 0 0 0 3.5px var(--color-paper), inset 0 0 0 4.5px color-mix(in srgb, var(--color-brass) 55%, transparent)", "purpose": "Double-ring specimen stamp, inside a 1.5px solid brass border." }
+    ],
+    "motion": [
+      { "name": "ease-journal", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "The one curve; every animation and transition uses it. Extended, never forked." },
+      { "name": "dur-micro", "value": "160ms", "purpose": "Press, toggles." },
+      { "name": "dur-ui", "value": "220ms", "purpose": "Hover, navigation, disclosure." },
+      { "name": "dur-reveal", "value": "520ms", "purpose": "Content entrances (journal-in; field-guide image hover scale 1.035)." },
+      { "name": "dur-hero", "value": "720ms", "purpose": "The hero print lay-in (print-lay)." },
+      { "name": "keyframe-journal-in", "value": "opacity 0→1 + translateY(14px)→0", "purpose": "Hero sequence, scroll reveals (.reveal-shown / [data-revealed] .reveal-child)." },
+      { "name": "keyframe-stamp-settle", "value": "opacity 0→1 + scale(0.94) rotate(-1.2deg)→0", "purpose": "Brass stamps pressing in (.hero-stamp, 480ms)." },
+      { "name": "keyframe-print-lay", "value": "opacity 0→1 + translateY(20px) rotate(-0.7deg)→0", "purpose": "The hero photograph being laid into the book (.hero-print, 720ms @ 260ms delay)." },
+      { "name": "keyframe-rule-draw", "value": "scaleX(0)→1, origin left center", "purpose": "Roadmap rail segments drawing in sequence (.rail-seg, 560ms, 100–450ms delays). A sequence, never a progress bar." },
+      { "name": "keyframe-anchor-flash", "value": "background moss 90%→transparent", "purpose": "One-shot emphasis after a research ToC jump (.anchor-flash, 900ms; removed on animationend)." },
+      { "name": "keyframe-menu-in", "value": "opacity 0→1 + translateY(-6px)→0", "purpose": "Mobile menu disclosure (.menu-in, dur-ui). Never scales or bounces." },
+      { "name": "reveal-contract", "value": "Reveal.tsx: server HTML visible; [data-motion-pending] hides after JS mount; [data-revealed] plays once (IO rootMargin 0 0 -12% 0, threshold 0.05, disconnects). Skips in-viewport-at-mount and prefers-reduced-motion. Children stagger 60–360ms via :nth-child(1..6). No-JS-safe: content never hidden.", "purpose": "The only client reveal mechanism." },
+      { "name": "motion-hover-variant", "value": "@media (hover: hover) and (pointer: fine)", "purpose": "Custom Tailwind variant gating all hover-driven movement; touch devices get none." },
+      { "name": "reduced-motion-backstop", "value": "prefers-reduced-motion: reduce → smooth scroll off, all durations 0.001s !important, [data-motion-pending] .reveal-child forced visible", "purpose": "globals.css backstop; Reveal also re-checks in JS." },
+      { "name": "print-backstop", "value": "@media print → all reveal/hero/rail animations none !important, opacity 1, transform none", "purpose": "Nothing stays hidden for a reader who prints or saves to PDF." },
+      { "name": "refused-patterns", "value": "pointer parallax, floating leaves/particles/cursor trails, per-word animation, scroll-jacking, arbitrary parallax, bounce/scale entrances, scroll-triggered re-animation", "purpose": "Deliberate refusals — decisions, not omissions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ],
+    "materials": [
+      { "name": "dot-grid", "value": "radial-gradient(var(--color-sage) 1px, transparent 1px), background-size 26px 26px", "purpose": "Research notebook graph-paper ruling. Deliberate, not a detector defect." },
+      { "name": "paper-grain", "value": "SVG fractalNoise data-URI overlay, opacity 0.5 (0.3 on footer)", "purpose": "Fine paper texture over hero and forest footer." },
+      { "name": "taped", "value": "96×26px moss/68% strips, dashed botanical/35% side borders, rotated -4deg/-3deg, overhanging corners ±22px/±11px", "purpose": "Tape holding photographs into the notebook; overhang clipped at main via overflow-x-clip, never hidden." },
+      { "name": "line-observed", "value": "border-top: 2px solid var(--color-botanical)", "purpose": "Confidence: observed directly." },
+      { "name": "line-preliminary", "value": "border-top: 2px dashed var(--color-brass)", "purpose": "Confidence: preliminary identification." },
+      { "name": "line-unrecorded", "value": "border-top: 2px dotted var(--color-sage)", "purpose": "Confidence: not recorded. Also marks honesty/limitation blocks." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Forest fill; the main call to action (Explore Our Research, Read the Research).",
+      "html": "<button class=\"ds-btn-primary\">Explore Our Research <span class=\"ds-btn-arrow\" aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; background: var(--color-forest); color: var(--color-paper); font-family: var(--font-sans); font-size: 0.98rem; font-weight: 600; padding: 14px 24px; border: none; border-radius: 3px; cursor: pointer; transition: background 220ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-primary:hover { background: var(--color-forest-deep); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-brass-ink); outline-offset: 3px; border-radius: 2px; } .ds-btn-arrow { display: inline-block; transition: transform 220ms cubic-bezier(0.22,1,0.36,1); } @media (hover: hover) and (pointer: fine) { .ds-btn-primary:hover .ds-btn-arrow { transform: translateX(4px); } }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined companion (Discover the Plants); hover washes moss.",
+      "html": "<button class=\"ds-btn-secondary\">Discover the Plants</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; background: transparent; color: var(--color-forest); font-family: var(--font-sans); font-size: 0.98rem; font-weight: 600; padding: 14px 24px; border: 1px solid color-mix(in srgb, var(--color-forest) 50%, transparent); border-radius: 3px; cursor: pointer; transition: border-color 220ms cubic-bezier(0.22,1,0.36,1), background-color 220ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-secondary:hover { border-color: var(--color-forest); background: color-mix(in srgb, var(--color-moss) 60%, transparent); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-brass-ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "status-proposed",
+      "description": "Truthful status chips; the vocabulary is closed to three values. In progress belongs to the website itself.",
+      "html": "<span class=\"ds-status ds-status--progress\">In progress</span> <span class=\"ds-status ds-status--approval\">Requires approval</span> <span class=\"ds-status ds-status--proposed\">Proposed</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-variant-numeric: tabular-nums; padding: 4px 10px; border-radius: 2px; border: 1px solid; } .ds-status--progress { background: var(--color-botanical); color: var(--color-paper); border-color: var(--color-botanical); } .ds-status--approval { background: rgba(177,139,93,0.15); color: var(--color-brass-ink); border-color: rgba(138,106,62,0.7); } .ds-status--proposed { background: var(--color-paper); color: var(--color-ink-soft); border-color: var(--color-sage); }"
+    },
+    {
+      "name": "Specimen Stamp",
+      "kind": "custom",
+      "refersTo": "specimen-stamp",
+      "description": "The archival label of the notebook world: brass double-ring frame around tracked small caps.",
+      "html": "<span class=\"ds-stamp\">TUNAS MUDA / SERVICE AS ACTION / 2026</span>",
+      "css": ".ds-stamp { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-variant-numeric: tabular-nums; color: var(--color-brass-ink); background: rgba(246,244,237,0.6); padding: 7px 12px; border: 1.5px solid var(--color-brass); box-shadow: inset 0 0 0 3.5px var(--color-paper), inset 0 0 0 4.5px color-mix(in srgb, var(--color-brass) 55%, transparent); }"
+    },
+    {
+      "name": "Taped Print",
+      "kind": "custom",
+      "refersTo": "components",
+      "description": "Signature: a photograph taped into the notebook with plate-number caption. Tape overhangs the corners; src=null renders the Evidence Gap instead.",
+      "html": "<figure class=\"ds-print\"><div class=\"ds-print-taped\"><div class=\"ds-print-photo\"></div></div><figcaption class=\"ds-print-caption\"><span class=\"ds-print-plate\">Plate 2</span><span class=\"ds-print-text\">Photograph 2 — Ornamental planting beds.</span></figcaption></figure>",
+      "css": ".ds-print-taped { position: relative; } .ds-print-taped::before, .ds-print-taped::after { content: \"\"; position: absolute; width: 96px; height: 26px; background: color-mix(in srgb, var(--color-moss) 68%, transparent); border-left: 1px dashed color-mix(in srgb, var(--color-botanical) 35%, transparent); border-right: 1px dashed color-mix(in srgb, var(--color-botanical) 35%, transparent); z-index: 2; pointer-events: none; } .ds-print-taped::before { top: -11px; left: -22px; transform: rotate(-4deg); } .ds-print-taped::after { bottom: -11px; right: -22px; transform: rotate(-3deg); } .ds-print-photo { aspect-ratio: 3/4; background: linear-gradient(160deg, var(--color-sage), var(--color-moss)); border: 1px solid var(--color-stone); box-shadow: 0 22px 44px -30px rgba(32,40,34,0.55); } .ds-print-caption { display: flex; align-items: flex-start; gap: 12px; margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(168,184,160,0.5); } .ds-print-plate { font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-brass-ink); margin-top: 3px; flex-shrink: 0; } .ds-print-text { font-family: var(--font-sans); font-size: 0.85rem; line-height: 1.6; color: var(--color-ink-soft); }"
+    },
+    {
+      "name": "Evidence Gap",
+      "kind": "custom",
+      "refersTo": "components",
+      "description": "Signature honesty component: the designed placeholder where a photograph is missing. Never substitute an image.",
+      "html": "<div class=\"ds-gap\" role=\"img\" aria-label=\"Photograph not available\"><svg width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"5.5\" width=\"29\" height=\"23\" stroke=\"#A8B8A0\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><path d=\"M2.5 28.5 L12 18 L19 24.5 L24 19.5 L31.5 27\" stroke=\"#A8B8A0\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"11\" cy=\"12\" r=\"2.5\" stroke=\"#A8B8A0\" stroke-width=\"1.5\" stroke-dasharray=\"2 2\"/></svg><p class=\"ds-gap-label\">Evidence gap</p><p class=\"ds-gap-copy\">This photograph is listed in the report as primary evidence, but the file was not available when the site was built. The record stays open until it is found.</p></div>",
+      "css": ".ds-gap { position: relative; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 0 32px; text-align: center; background: var(--color-paper-deep); border: 1px dashed var(--color-sage); background-image: repeating-linear-gradient(0deg, var(--color-stone) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, transparent 0 7px, var(--color-stone) 7px 8px, transparent 8px 14px); } .ds-gap-label { font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-brass-ink); } .ds-gap-copy { max-width: 34ch; font-family: var(--font-sans); font-size: 0.82rem; line-height: 1.6; color: var(--color-ink-soft); }"
+    },
+    {
+      "name": "Confidence Mark",
+      "kind": "custom",
+      "refersTo": "components",
+      "description": "Evidence state as line treatment: solid=observed, dashed=preliminary, dotted=not recorded. Always shown with the legend.",
+      "html": "<span class=\"ds-conf\"><span class=\"ds-conf-line ds-conf-line--observed\" aria-hidden=\"true\"></span><span class=\"ds-conf-label\">Observed directly</span></span> <span class=\"ds-conf\"><span class=\"ds-conf-line ds-conf-line--preliminary\" aria-hidden=\"true\"></span><span class=\"ds-conf-label\">Preliminary — genus level</span></span> <span class=\"ds-conf\"><span class=\"ds-conf-line ds-conf-line--unrecorded\" aria-hidden=\"true\"></span><span class=\"ds-conf-label\">Not recorded</span></span>",
+      "css": ".ds-conf { display: inline-flex; flex-direction: column; gap: 6px; } .ds-conf-line { display: block; width: 40px; } .ds-conf-line--observed { border-top: 2px solid var(--color-botanical); } .ds-conf-line--preliminary { border-top: 2px dashed var(--color-brass); } .ds-conf-line--unrecorded { border-top: 2px dotted var(--color-sage); } .ds-conf-label { font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-soft); }"
+    },
+    {
+      "name": "Primary Nav Link",
+      "kind": "nav",
+      "refersTo": "components",
+      "description": "Header navigation with a botanical underline indicator that scales in from the left on the active route.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-nav-link--active\" href=\"/research\">Research</a><a class=\"ds-nav-link\" href=\"/ecosystem\">Ecosystem</a><a class=\"ds-nav-cta\" href=\"/proposal\">Proposal</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 4px; font-family: var(--font-sans); } .ds-nav-link { position: relative; font-size: 0.9rem; font-weight: 500; color: var(--color-ink-soft); text-decoration: none; padding: 8px 12px; border-radius: 3px; transition: color 220ms cubic-bezier(0.22,1,0.36,1); } .ds-nav-link:hover, .ds-nav-link--active { color: var(--color-forest); } .ds-nav-link::after { content: \"\"; position: absolute; inset: auto 12px -1px; height: 2px; background: var(--color-botanical); transform: scaleX(0); transform-origin: left; transition: transform 220ms cubic-bezier(0.22,1,0.36,1); } .ds-nav-link--active::after { transform: scaleX(1); } .ds-nav-cta { font-size: 0.875rem; font-weight: 600; color: var(--color-forest); text-decoration: none; padding: 7px 14px; margin-left: 8px; border: 1px solid color-mix(in srgb, var(--color-forest) 60%, transparent); border-radius: 3px; transition: background-color 220ms cubic-bezier(0.22,1,0.36,1), color 220ms cubic-bezier(0.22,1,0.36,1); } .ds-nav-cta:hover { background: var(--color-forest); color: var(--color-paper); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bound Field Notebook",
+    "overview": "This is a school campus's overlooked vegetation given the care of a real research archive. The page object is a bound field notebook lying open: warm dot-grid paper ground, photographs taped in with overhanging tape strips, specimen stamps pressed in brass, and dense specimen data set in tracked small caps. The natural-history-museum register — plate numbers, leader-line annotations, archival captions — supplies the precision; the notebook supplies the warmth. It explicitly refuses the sustainability landing page and every predictable eco-branding move. The system's second idea is that evidence state is a visual material: solid line means observed, dashed means preliminary, dotted means unrecorded — the same three treatments mark list bullets, section borders, confidence marks, and the missing photograph, which becomes a designed woven gap rather than a substitute image. Motion extends the same temperament: one easing curve, one duration scale, reveals that play once and never fight the reader.",
+    "keyCharacteristics": [
+      "Warm paper ground with 26px dot-grid ruling and fine SVG paper grain",
+      "Photographs as physical objects: taped prints with overhanging tape, deep soft shadows, plate numbers",
+      "Evidence state as line treatment: solid = observed, dashed = preliminary, dotted = unrecorded",
+      "Brass reserved for stamps, plate numbers, and specimen labels — the only accent",
+      "Instrument Serif display (with italic as a voice) over Geist grotesque small caps",
+      "Near-square geometry (2–3px), hairline borders, tonal depth instead of card shadows",
+      "Motion: one curve (--ease-journal), four durations, one-shot reveals, pointer-gated hovers"
+    ],
+    "rules": [
+      { "name": "The Line-State Rule", "body": "Evidence state is carried by line treatment, not by color alone: 2px solid botanical = observed directly, 2px dashed brass = preliminary, 2px dotted sage = not recorded. Every confidence display ships with the standing legend. Never introduce a fourth treatment or reassign these three.", "section": "colors" },
+      { "name": "The Brass-Rarity Rule", "body": "Brass appears only as thin frames, small caps text, or 15%-opacity tints — stamps, plate numbers, section labels, focus rings. It never becomes a large fill or a button background; its rarity is what makes it read as pressed metal on paper.", "section": "colors" },
+      { "name": "The Forest-as-Punctuation Rule", "body": "Dark forest sections are events, used to close a narrative (home closing spread, footer) — never alternating card backgrounds. On forest, body copy uses moss/sage tints and headings use paper.", "section": "colors" },
+      { "name": "The Label Rule", "body": "Anything a museum would stamp or index — stamps, plate numbers, badges, table keys, breadcrumbs, and dense section headings set in the specimen register — is Geist label style (11px/600/0.14em uppercase, tabular). Everything a human reads in sentences is sentence case. Scientific binomials and pull-quote emphasis use the serif italic — never bold the display face. Record headers ARE the label; the build's occasional brass label-line above a display heading is a carried defect, not a pattern to repeat.", "section": "typography" },
+      { "name": "The Measure Rule", "body": "Long-form prose never exceeds ~68ch (.prose-journal p); supporting copy blocks cap at 46–64ch. Headlines use text-wrap: balance and explicit max-w-[Nch] to control line count.", "section": "typography" },
+      { "name": "The Physical-Object Rule", "body": "A shadow means an object resting on the page — a photograph, a sheet of paper, a header that has changed state. Ordinary containers, list items, and links are flat. If a new element isn't pretending to be a physical thing, it gets a hairline border and a tonal step, not a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do carry evidence state with the three line treatments (solid/dashed/dotted) and always pair confidence marks with the standing legend.",
+      "Do ship MissingEvidence whenever a photograph is absent — dashed frame, weave, plain-language copy — and keep the record open around it.",
+      "Do keep the closed status vocabulary (Proposed / Requires approval / In progress); \"In progress\" means the website, and nothing may imply Ms. Gia has approved anything.",
+      "Do gate hover-driven movement behind motion-hover and time every transition on the shared curve and duration scale.",
+      "Do use Reveal one-shot for major lists and ledgers; keep report prose and the letter body static.",
+      "Do clip tape overhang with overflow-x-clip on main (never hidden), and keep the print backstops working when adding any animated element.",
+      "Do build ledgers from gap-px over stone and separate bands with hairline borders and tonal steps.",
+      "Do set labels, stamps, and specimen data in tracked uppercase small caps with tabular figures, and cap prose at ~68ch."
+    ],
+    "donts": [
+      "Don't invent species, counts, wildlife, measurements, approvals, outcomes, or photographs. Observed, preliminary, interpretive, and unknown must stay distinguishable; limitations stay visible.",
+      "Don't substitute any image, illustration, or stock photo for the missing Observation 4 photograph — the evidence gap is the honest answer.",
+      "Don't treat site dates as build dates: \"27 October 2026\" is the report's own content truth.",
+      "Don't add parallax, particles, floating leaves, cursor trails, per-word animation, scroll-jacking, or re-firing scroll animations.",
+      "Don't turn the roadmap rail into a progress bar or color it by completion; it is neutral sequence, and the badges carry status.",
+      "Don't let brass become a fill, add neon greens or gradients, or reach for stock sustainability-template layouts, pill shapes, or generic card grids.",
+      "Don't add a fourth confidence treatment, a new status value, or a second easing curve or duration outside the recorded scale.",
+      "Don't add a small-caps label line directly above a display heading (a kicker/eyebrow). The heading carries its own weight; use the label style for the heading itself or for genuine specimen data, not for a redundant line above it."
+    ]
+  }
+}
